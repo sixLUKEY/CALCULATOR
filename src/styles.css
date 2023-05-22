@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btn:hover{
+    background-color: rgb(62, 62, 62);
+    color: antiquewhite;
+}
+
+.btn:active{
+    background-color: rgba(62, 62, 62, 0.536);
+}
+
+.btn-row button {
+    width: 22% ;
+    height: 60px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.2s;
+    
+}
+
+.buttonAlt{
+    background-color: #eb2016 !important;
+}
+
+.buttonAlt:hover{
+    background-color: #b72119!important;
+    color: white;
+}
+
+.buttonAlt:active{
+    background-color: #b72119d0!important;
+}
+
+.operator{
+    color: #c69b50;
+    font-weight: 900;
+}
+
+.parenthesis{
+    color: rgb(192, 93, 93);
+    font-weight: 900;
+}
+
+.percentage{
+    color: #5fb557; 
+}
+
+.solarPanel{
+    overflow: hidden;
+    transition: 10s ease-in;
+}
+
+.solarPanel:hover{
+    background-color: #9b5a2b;
+}
+
+.solarPanel:hover .slider{
+    animation: slide 0.2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-75%);
+    }
+}
+
+.screen{
+    font-family: 'Orbitron', sans-serif;
+}
