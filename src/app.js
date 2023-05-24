@@ -1,9 +1,11 @@
+// link to HTML elements
 const calcButtons = document.querySelectorAll('.btn');
 const inputScreen = document.querySelector('.screenIn');
 const outputScreen = document.getElementById('outputScreen');
 
 let input = "";
 
+// Adding function to buttons + giving buttons correct property
 for ( let btn of calcButtons ) {
     const value = btn.dataset.btn;
 
@@ -39,6 +41,8 @@ for ( let btn of calcButtons ) {
     })
 }
 
+
+// adding correct character for operators + changing color
 function validInput(input) {
     let inputs = input.split("");
     let inputsLength = inputs.length;
@@ -64,6 +68,8 @@ function validInput(input) {
     return inputs.join("");
 }
 
+
+//Adding decimal points to output
 function validOutput( output ){
     let outputString = output.toString();
     let decimal = outputString.split(".")[1];
@@ -85,6 +91,7 @@ function validOutput( output ){
     return outputs.join("");
 }
 
+//Prevent operators and "." from being addable multiple times
 function correctInput ( value ){
     let inputLast = input.slice(-1);
     let operators = [ "+", "-", "*", "/" ];
@@ -104,6 +111,7 @@ function correctInput ( value ){
     return true;
 }
 
+//Giving % operator correct functionality
 function percentagePrep ( input ) {
     let inputs = input.split( "" );
 
@@ -115,3 +123,7 @@ function percentagePrep ( input ) {
 
     return inputs.join( "" );
 }
+
+// document.addEventListener( 'keydown', ( event ) => {
+//     if ( event.key == "1") { inputScreen.value += event.key;}
+// })
